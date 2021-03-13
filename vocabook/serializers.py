@@ -13,8 +13,8 @@ class DefinitionSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class VocabularySerializer(serializers.ModelSerializer):
-    definitions = DefinitionSerializer(many=True)
-    examples = ExampleSerializer(many=True)
+    definitions = DefinitionSerializer(many=True, required=False)
+    examples = ExampleSerializer(many=True, required=False)
     class Meta:
         model = Vocabulary
         fields = ['id', 'tag', 'date', 'title', 'pronounce', 'definitions', 'examples']
