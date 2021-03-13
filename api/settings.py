@@ -132,3 +132,6 @@ CORS_ORIGIN_WHITELIST = [
     'https://localhost:8000',
     'https://vocabook-app-frontend.heroku.com',
 ]
+
+import django_heroku
+django_heroku.settings(locals())
